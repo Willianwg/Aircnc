@@ -1,7 +1,7 @@
 import React, { useState } from "react"; 
 import api from "../../services/api"; 
 
-export default function Login (){ 
+export default function Login ({ history }){ 
 	
 	const [ email, setEmail ] = useState("");
 	
@@ -13,6 +13,7 @@ export default function Login (){
 		const { _id } = response.data;
 		
 		localStorage.setItem("user",  _id);
+		history.push("/dashboard");
 		
 	};
 	
@@ -23,9 +24,7 @@ export default function Login (){
 				ofereça <strong>spots</strong> para programadores e encontre <strong>talentos</strong>
 			</p>
 			<form onSubmit={ handleSubmit }>
-				<label htmlfor="email">
-					Email *
-				</label>
+				<label htmlfor="email">Email *</label>
 				<input 
 					type="email"
 					 id="email" 
@@ -34,10 +33,7 @@ export default function Login (){
 					onChange={ event => setEmail(event.target.value) }
 					/>
 					
-				<button type="submit" 
-				className="btn">
-					Entrar
-				</button>
+				<button type="submit" className="btn">Entrar</button>
 			</form>
 	</>
 	);

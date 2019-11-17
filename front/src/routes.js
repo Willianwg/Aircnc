@@ -13,12 +13,13 @@ export default function Routes (){
 				exact component={ Login }/>
 				
 				<Route 
-				path="/new" 
-				component={ New }/>
+				path="/dashboard" 
+				component={ Dashboard  }/>
 				
 				<Route 
-				path="/dashboard " 
-				component={ Dashboard  }/>
+				path="/new" 
+				component={ New }/>
+	
 				
 			</Switch>
 		</BrowserRouter>

@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="container">
     	<img src={logo} alt="logo" /> 
+    
 		<div className="content">
 			<Routes />	
 		</div>
