@@ -11,7 +11,7 @@ const server = http.Server(app);
 const io = socketio(server);
 
 mongoose.set("useUnifiedTopology", true);
-mongoose.connect("mongodb+srv://user:qwer1245@cluster0-x73mg.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser: true });
+mongoose.connect("mongodb+srv://...",{ useNewUrlParser: true });
 
 const connectedUsers = {};
 
